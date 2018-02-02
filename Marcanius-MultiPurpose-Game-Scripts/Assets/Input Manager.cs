@@ -8,7 +8,7 @@ public class InputManager : MonoBehaviour {
 	iInputSystem instance;
 
 	void Awake() {
-
+		GetInputSystem();
 	}
 
 	/// <summary>
@@ -25,7 +25,7 @@ public class InputManager : MonoBehaviour {
 	/// </summary>
 	static iInputSystem CreateInstance() {
 #if UNITY_STANDALONE
-		throw new NotImplementedException();
+		return new StandaloneInputSystem();
 #endif
 	}
 }

@@ -34,3 +34,5 @@ sysinfo.txt
 *.apk
 *.unitypackage
 *.lock
+*.ide
+Marcanius-MultiPurpose-Game-Scripts/Temp/UnityLockfile

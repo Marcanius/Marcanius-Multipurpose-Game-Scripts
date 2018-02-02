@@ -3,27 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// A class which keeps track of all objects in unity that need to be reached by others
+/// A class which displays various messages to the player in the form of pop-ups and dialogue
 /// </summary>
-public class ObjectManager : MonoBehaviour {
-
-	#region Managers	
-	public iInputSystem InputMethod;
-	public StateManager StateManager;
-	#endregion
+public class MessageManager : MonoBehaviour {
 
 	/// <summary>
 	/// Use this for initialization
 	/// </summary>
 	void Awake() {
-		StateManager = new StateManager();
+
 	}
 
 	/// <summary>
 	/// Use this as a first update
 	/// </summary>
 	void Start() {
-		InputMethod = InputManager.GetInputSystem();
+
 	}
 
 	/// <summary>

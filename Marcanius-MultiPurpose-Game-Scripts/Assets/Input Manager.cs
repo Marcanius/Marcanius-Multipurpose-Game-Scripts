@@ -3,18 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InputManager : MonoBehaviour {
+public static class InputManager {
 
-	iInputSystem instance;
-
-	void Awake() {
-		GetInputSystem();
-	}
+	static iInputSystem instance;
 
 	/// <summary>
 	/// Returns the right input system for this platform
 	/// </summary>
-	public iInputSystem GetInputSystem() {
+	public static iInputSystem GetInputSystem() {
 		if ( instance == null ) { instance = CreateInstance(); }
 
 		return instance;
@@ -39,6 +35,7 @@ public interface iInputSystem {
 }
 
 public class StandaloneInputSystem : iInputSystem {
+
 	public bool GetInput(GameAction action) {
 		return Input.GetButtonDown(action.ToString());
 	}
